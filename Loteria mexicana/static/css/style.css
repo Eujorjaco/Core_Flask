@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-family: cursive;
+}
+
+body {
+    background-color: white;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+}
+
+.cartas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cartas .rosa {
+    width: 170px;
+    height: 220px;
+    background-color: #dda8c4;
+    border-color: white;
+    border-style: inset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.amarillo {
+    width: 170px;
+    height: 220px;
+    background-color: #eadb00;
+    border-color: white;
+    border-style: inset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.azul {
+    width: 170px;
+    height: 220px;
+    background-color: #287fe4;
+    border-color: white;
+    border-style: inset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
