@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/style.css')}}">
+    <script type="text/javascript" src="{{url_for('static',filename='js/script.js')}}"></script>
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Paises</th>
+            <th>Capital</th>
+        </tr>
+        {% for fila in paiscapital:%}
+            <tr>
+                {% if loop.index%2 == 0 : %}
+                    <td class="claro">{{fila['pais']}}</td>
+                    <td class="claro">{{fila['capital']}} {{contador}}</td>
+                {% elif loop.index%2 == 1 : %}
+                    <td class="oscuro">{{fila['pais']}}</td>
+                    <td class="oscuro">{{fila['capital']}}{{contador}}</td>
+                {%endif%}
+            </tr>
+        {%endfor%}
+    </table>
+</body>
+</html>

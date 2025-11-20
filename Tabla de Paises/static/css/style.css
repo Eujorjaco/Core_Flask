@@ -1,0 +1,26 @@
+table {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
+}
+th {
+    width: 500px;
+    background-color: rgb(0, 81, 136);
+    color: aliceblue;
+    font-size: 30px;
+    text-align: center;
+    height: 50px;
+}
+td {
+    border-color: black;
+    width: 500px;
+    text-align: center;
+    height: 40px;
+}
+.oscuro {
+    background-color:rgb(132, 182, 243);
+}
+.claro {
+    background-color:rgb(195, 218, 250)
+}
