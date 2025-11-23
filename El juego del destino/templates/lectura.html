@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lectura</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css')}}">
+    <script type="text/javascript" src="{{url_for('static',filename='js/script.js')}}"></script>
+</head>
+<body>
+    <p>Soy el adivino del Dojo, <span class="verde">{{info["nombre"]}}</span> tendrá un viaje muy largo dentro de <span class="azul">{{info["numero"]}}</span> años a <span class="amari">{{info["lugar"]}}</span> y estara el resto de sus días preparando <span class="celes">{{info["comida"]}}</span> para todas las personas que quiere.</p>
+    <a href="/">¡Jugar de nuevo!</a>
+</body>
+</html>

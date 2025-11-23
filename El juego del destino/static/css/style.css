@@ -1,0 +1,73 @@
+h1 {
+    text-align: center;
+    font-size: 50px;
+}
+
+h3 {
+    text-align: center;
+}
+
+form {
+    background-color: rgb(14, 111, 253);
+    padding: 20px;
+    display: block;
+    width: 500px;
+    height: 400px;
+}
+
+input {
+    width: 480px;
+    height: 40px;
+    border-radius: 5px;
+    border-style: hidden;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mb-3 {
+    padding: 10px;
+}
+
+label {
+    font-size: 20px;
+}
+
+.btn-primary {
+    background-color: aqua;
+    border-radius: 10px;
+    width: 160px;
+    height: 60px;
+    font-size: 20px;
+}
+
+.azul {
+    color: blue;
+}
+
+.verde {
+    color: green;
+}
+
+.amari {
+    color: yellow;
+}
+
+.celes {
+    color: skyblue;
+}
+
+p {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+}
+
+a {
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego del destino</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css')}}">
+    <script type="text/javascript" src="{{url_for('static',filename='js/script.js')}}"></script>
+</head>
+
+<body>
+    <div>
+        <h1>¿Quieres conocer tu futuro?</h1>
+        <h3>coloca las respuesta y te diremos tu destino</h3>
+    </div>
+
+    <div class="container">
+        <form action="/enviar" method="post">
+            <div class="mb-3">
+                <label class="form-label">Tu Nombre:</label><br>
+                <input type="text" class="form-control" name="nombre" >
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Un lugar</label><br>
+                <input type="text" class="form-control" name="lugar">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Un número:</label><br>
+                <input type="text" class="form-control" name="numero">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Tu Comida favorita:</label><br>
+                <input type="text" class="form-control" name="comida">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Ver mi destino</button>
+        </form>
+    </div>
+</body>
+
+</html>
