@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Usted a visitado esta pagina un total de: {{visita}}</h1>
+    <form action="/aumenta2" method="post">
+        <label>Presiona para aumentar +2 a las visitas</label>
+        <button>push</button>
+    </form>
+
+    <form action="/aumentax" method="post">
+        <label>Aumenta las visitas la cantidad que desees</label>
+        <input type="number" name="number" required>
+        <button>push</button>
+    </form>
+
+    <form action="/borrar_visitas" method="post">
+        <label>Presiona para reiniciar el contador</label>
+        <button>push</button>
+    </form>
+    <h4>Usted a reiniciado la cantidad de visitas un total: {{borrado}}</h4>
+    
+</body>
+
+</html>
