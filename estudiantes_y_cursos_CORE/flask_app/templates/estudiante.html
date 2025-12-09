@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Nuevo Estudiante</h1>
+    <form action="/iestudiante" method="post">
+        <label for="curso_id">Curso:</label>
+        <select name="curso_id" id="curso_id">
+            {% for curso in todos_cursos %}
+                <option value="{{curso.id}}">
+                    {{curso.nombre}}
+                </option>
+            {% endfor %}
+        </select><br><br>
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre"><br><br>
+        <label for="apellido">Apellido:</label>
+        <input type="text" name="apellido"><br><br>
+        <label for="edad">Edad:</label>
+        <input type="edad" name="edad"><br><br>
+        <button type="submit" >Crear</button>
+    </form>
+    <a href="/cursos">Inicio</a>
+</body>
+
+</html>
