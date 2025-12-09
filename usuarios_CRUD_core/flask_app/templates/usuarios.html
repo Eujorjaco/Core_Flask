@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Usuarios</h1>
+    <a href="/usuarios/nuevo">Nuevo usuario</a>
+    <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre Completo </th>
+                    <th>E-mail</th>
+                    <th>Fecha de creacion</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for usuario in todos_usuarios %}
+                    <tr>
+                        <td>{{ usuario.id }}</td>
+                        <td>{{ usuario.nombre }} {{ usuario.apellido }}</td>
+                        <td>{{ usuario.email }}</td>
+                        <td>{{ usuario.created_at }}</td>
+                        <td>
+                            <a href="/usuarios/{{ usuario.id }}">Ver</a> |
+                            <a href="/usuarios/editar/{{ usuario.id }}">Editar</a> |
+                            <form action="/usuarios/eliminar/{{ usuario.id }}" method="POST" style="display: inline;">
+                                <input type="submit" value="Eliminar" onclick="return confirm('¿Eliminar?');">
+                            </form>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+</body>
+</html>

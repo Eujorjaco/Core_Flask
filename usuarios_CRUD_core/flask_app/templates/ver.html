@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Usuario {{usuario.id}}</h1>
+    <p>Nombre completo: {{usuario.nombre}} {{usuario.apellido}} </p>
+    <p>E-mail: {{usuario.email}}</p>
+    <p>Fecha de creacion: {{usuario.created_at}}</p>
+    <p>Fecha de actualizacion: {{usuario.updated_at}}</p>
+
+    <a href="/usuarios/editar/{{ usuario.id }}">Editar</a> |
+    <form action="/usuarios/eliminar/{{ usuario.id }}" method="POST" style="display: inline;">
+        <input type="submit" value="Eliminar" onclick="return confirm('¿Eliminar?');">
+    </form>
+</body>
+
+</html>
