@@ -1,0 +1,36 @@
+h1 {
+    color: blue;
+    text-align: center;
+}
+
+input {
+    margin-left: auto;
+}
+label {
+    margin-right: auto;
+}
+
+.container {
+    width: 800px;
+    height: 400px;
+
+    margin: 0 auto;
+
+}
+
+.dividir {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.sep {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn {
+border-style: double;
+margin-left: 100px;
+}
