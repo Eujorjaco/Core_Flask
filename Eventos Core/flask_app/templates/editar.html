@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+    <title>Editar Evento</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="dividir">
+            <h1>Editar Evento</h1>
+            <a href="/eventos">Inicio</a>
+            <a href="/cerrar">Cerrar sesion</a>
+        </div>
+
+        <div class="container2">
+            <form action="/editando" method="post">
+                <input type="hidden" name="id" value="{{ evento.id }}">
+                <div class="sep">
+                <label for="evento">Nombre evento:</label>
+                <input type="text" name="evento" placeholder="{{evento.evento}}" required><br><br>
+                </div>
+                <div class="sep">
+                <label for="ubicacion">Ubicacion:</label>
+                <input type="text" name="ubicacion" placeholder="{{evento.ubicacion}}" required><br><br>
+                </div>
+                <div class="sep">
+                <label for="fecha">Fecha:</label>
+                <input type="date" name="fecha"><br><br>
+                </div>
+                <div class="sep">
+                <label for="descripcion">Descripcion:</label>
+                <textarea name="descripcion" placeholder="{{evento.descripcion}}" required></textarea><br>
+                </div>
+                <br><button class="btn" type="submit">Guardar evento</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+    <title>Eventos</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="dividir">
+            <h1>Bienvenid@, {{usuario.nombre}} {{usuario.apellido}} </h1>
+            <a href="/crear">Crear evento</a>
+            <a href="/cerrar">Cerrar sesion</a>
+        </div>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Evento</th>
+                        <th>Ubicacion</th>
+                        <th>Fecha</th>
+                        <th>Publicado por</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for evento in tabla.eventos%}
+                    <tr>
+                        <td> {{evento.evento}}</td>
+                        <td>{{evento.ubicacion}}</td>
+                        <td>{{evento.fecha}}</td>
+                        <td>{{evento.id_nombre}}</td>
+                        <td>
+                            {%if evento.usuario_id == session['usuario_id'] %}
+                            <a href="/ver/{{ evento.id }}">Ver</a> |
+                            <a href="/ver/editar/{{ evento.id }}">Editar</a> |
+                            <form action="/ver/eliminar/{{ evento.id }}" method="POST" style="display: inline;">
+                                <input type="submit" value="Eliminar" onclick="return confirm('¿Eliminar?');">
+                            </form>
+                            {%else%}
+                            <a href="/ver/{{ evento.id }}">Ver</a>
+                            {%endif%}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="error">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <div class="errores">
+                {% for message in messages %}
+                <p>{{ message }}</p>
+                {% endfor %}
+            </div>
+            {% endif %}
+            {% endwith %}
+        </div>
+    </div>
+</body>
+
+</html>

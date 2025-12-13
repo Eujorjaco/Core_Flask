@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+    <title>Ver evento</title>
+</head>
+
+<body>
+    <div class="container">
+        {% for evento in usuario.eventos%}
+        <div class="dividir">
+            <h1>{{evento.evento}}</h1>
+            <a href="/eventos">Inicio</a>
+            <a href="/cerrar">Cerrar sesion</a>
+        </div>
+        <div>
+            <h3>Publicado por: {{evento.id_nombre}}</h3>
+        </div>
+        <div class="container3">
+
+            <div class="row">
+                <div class="col1">
+                    <h3>Ubicacion:</h3>
+                    <h3>Fecha:</h3>
+                    <h3>Detalles:</h3>
+                </div>
+                <div class="col2">
+                    <h3>{{evento.ubicacion}}</h3>
+                    <h3>{{evento.fecha}}</h3>
+                    <h3>{{evento.descripcion}}</h3>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+
+</html>
